@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<!--
+  Theme: Tokusetsu 2
+  by @sanographix
+  http://www.sanographix.net
+  (c) 2013 Showkaku Sano [sanographix@gmail.com]
+  Free to use under the MIT license.
+  Please leave at least ONE credit link. Do not delete this box.
+
+  Modified Nobuhito Muto.[nobuhito.muto@gmail.com]
+  for Smart Phone Application Site.
+-->
+
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Variables -->
+  <meta name="select:ThemeColor" content="red" title="Strawberry">
+  <meta name="select:ThemeColor" content="green" title="Turquoise">
+  <meta name="select:ThemeColor" content="blue" title="Blue">
+  <meta name="select:ThemeColor" content="gray" title="Smoke">
+
+  <meta name="text:Introduction" content="" />
+  <meta name="text:Introduction Heading" content="Introduction" />
+  <meta name="text:Youtube Embed Code" content="" />
+  <meta name="text:Soundcloud Embed Code" content="" />
+  <meta name="text:Nicovideo Embed Code" content="" />
+  <meta name="text:Footer Text" content="" />
+
+  <meta name="text:Circle Name" content="" />
+  <meta name="text:Circle URL" content="" />
+  <meta name="text:Spec" content="" />
+  <meta name="text:Release Date" content="" />
+  <meta name="text:Event Booth Number" content="" />
+  <meta name="text:Price" content="" />
+
+  <meta name="text:Store01 Name" content="" />
+  <meta name="text:Store01 URL" content="" />
+  <meta name="text:Store02 Name" content="" />
+  <meta name="text:Store02 URL" content="" />
+  <meta name="text:Store03 Name" content="" />
+  <meta name="text:Store03 URL" content="" />
+  <meta name="text:Store04 Name" content="" />
+  <meta name="text:Store04 URL" content="" />
+
+  <meta name="text:Lineup01 Name" content="" />
+  <meta name="text:Lineup01 Role" content="" />
+  <meta name="text:Lineup01 URL" content="" />
+  <meta name="text:Lineup02 Name" content="" />
+  <meta name="text:Lineup02 Role" content="" />
+  <meta name="text:Lineup02 URL" content="" />
+  <meta name="text:Lineup03 Name" content="" />
+  <meta name="text:Lineup03 Role" content="" />
+  <meta name="text:Lineup03 URL" content="" />
+  <meta name="text:Lineup04 Name" content="" />
+  <meta name="text:Lineup04 Role" content="" />
+  <meta name="text:Lineup04 URL" content="" />
+  <meta name="text:Lineup05 Name" content="" />
+  <meta name="text:Lineup05 Role" content="" />
+  <meta name="text:Lineup05 URL" content="" />
+  <meta name="text:Lineup06 Name" content="" />
+  <meta name="text:Lineup06 Role" content="" />
+  <meta name="text:Lineup06 URL" content="" />
+  <meta name="text:Lineup07 Name" content="" />
+  <meta name="text:Lineup07 Role" content="" />
+  <meta name="text:Lineup07 URL" content="" />
+  <meta name="text:Lineup08 Name" content="" />
+  <meta name="text:Lineup08 Role" content="" />
+  <meta name="text:Lineup08 URL" content="" />
+  <meta name="text:Lineup09 Name" content="" />
+  <meta name="text:Lineup09 Role" content="" />
+  <meta name="text:Lineup09 URL" content="" />
+  <meta name="text:Lineup10 Name" content="" />
+  <meta name="text:Lineup10 Role" content="" />
+  <meta name="text:Lineup10 URL" content="" />
+
+  <meta name="if:Enable Facebook Button" content="1"/>
+  <meta name="if:Enable Tweet Button" content="1"/>
+  <meta name="if:Enable Bookmark Button" content="1"/>
+  <meta name="if:Enable Plus1 Button" content="1"/>
+
+  <meta name="text:Blog Domain" content="" />
+  <meta name="image:Main Image" content="//sanographix.github.io/public/tumblr/tokusetsu2/images/header-template.jpg"/>
+  <meta name="image:Main Image1" content=""/>
+  <meta name="image:Main Image2" content=""/>
+  <meta name="image:Main Image3" content=""/>
+  <meta name="image:Main Image4" content=""/>
+  <meta name="image:Main Image5" content=""/>
+  <meta name="image:Jacket" content=""/>
+  <meta name="image:Banner1" content=""/>
+  <meta name="image:Banner2" content=""/>
+  <!-- イメージ追加 -->
+  <meta name="image:ScreenShot1" content=""/>
+  <meta name="image:ScreenShot2" content=""/>
+  <meta name="image:ScreenShot3" content=""/>
+  <meta name="image:ScreenShot4" content=""/>
+  <meta name="image:ScreenShot5" content=""/>
+  
+  <meta name="image:Lineup01 Icon" content="" />
+  <meta name="image:Lineup02 Icon" content="" />
+  <meta name="image:Lineup03 Icon" content="" />
+  <meta name="image:Lineup04 Icon" content="" />
+  <meta name="image:Lineup05 Icon" content="" />
+  <meta name="image:Lineup06 Icon" content="" />
+  <meta name="image:Lineup07 Icon" content="" />
+  <meta name="image:Lineup08 Icon" content="" />
+  <meta name="image:Lineup09 Icon" content="" />
+  <meta name="image:Lineup10 Icon" content="" />
+  
+  
+  
+  <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:Circle Name}{/block:IndexPage}</title>
+  {block:TagPage}
+    <meta name="robots" content="noindex,follow"/>
+  {/block:TagPage}
+  {block:DayPage}
+    <meta name="robots" content="noindex,follow"/>
+  {/block:DayPage}
+  {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+  <meta name="viewport" content="width=device-width">
+
+  <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:Circle Name}{/block:IndexPage}" />
+  <meta property="og:type" content="website" />
+  {block:IfMainImageImage}
+    <meta property="og:image" content="{image:Main Image}" />
+  {/block:IfMainImageImage}
+  <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
+  <meta property="og:site_name" content="{Title}" />
+  {block:Description}
+    <meta property="og:description" content="{MetaDescription}">
+  {/block:Description}
+
+  <link rel="stylesheet" href="style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,300italic' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="canonical" href="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
+
+  <!--[if lt IE 9]>
+    <script src="//sanographix.github.io/public/tumblr/tokusetsu2/js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <style>
+  {CustomCSS}
+  </style>
+
+</head>
+<body class="{select:ThemeColor}">
+
+  <header id="globalheader">
+    <div class="globalheader-inner content">
+      <h1>
+        <a href="/">{Title}</a>
+      </h1>
+        <nav class="header-nav">
+          <ul>
+            {block:IndexPage}
+              <li>
+                <a href="#screenshot">Screen Shot</a>
+              </li>
+              <li>
+                <a href="#lineup">lineup</a>
+              </li>
+            {/block:IndexPage}
+            {block:HasPages}
+              {block:Pages}
+                <li>
+                  <a href="{URL}">{Label}</a>
+                </li>
+              {/block:Pages}
+            {/block:HasPages}
+          </ul>
+        </nav>
+    </div>
+  </header>
+
+  {block:IndexPage}<!-- ここから Index ページ -->
+<!--スライドショー //ここ何か、上手く実装出来る方法を考える。
+  <section id="header-image">
+    <div class="header-image-content" style="background-image:url('{image:Main Image}');"></div>
+    <div class="header-image-mask"></div>
+  </section>
+  -->
+  <section id="header-image">      
+      <div class="flexslider">
+        <ul class="slides">
+          {block:IfMainImage1}
+            <li>
+              <a href="{Permalink}">
+                <div class="slide-img" style="background-image: url('{image:Main Image}');"></div>
+              </a>
+            </li>
+          {/block:IfMainImage1}
+          {block:IfMainImage2}
+            <li>
+              <a href="{Permalink}">
+                <div class="slide-img" style="background-image: url('{image:Main Image}');"></div>
+              </a>
+            </li>
+          {/block:IfMainImage2}
+          {block:IfMainImage3}
+            <li>
+              <a href="{Permalink}">
+                <div class="slide-img" style="background-image: url('{image:Main Image}');"></div>
+              </a>
+            </li>
+          {/block:IfMainImage3}
+          {block:IfMainImage4}
+            <li>
+              <a href="{Permalink}">
+                <div class="slide-img" style="background-image: url('{image:Main Image}');"></div>
+              </a>
+            </li>
+          {block:IfMainImage4}
+            <li>
+              <a href="{Permalink}">
+                <div class="slide-img" style="background-image: url('{image:Main Image}');"></div>
+              </a>
+            </li>
+          {/block:IfMainImage4}
+        </ul>
+      </div>
+</section>
+
+  <div class="section-wrapper">
+ <section id="lineup" class="section">
+      <div class="content">
+        <h3>Muchicos App Lineup</h3>
+        <ul class="list">
+          {block:IfLineup01Name}
+            <li>
+              <span class="role">{text:Lineup01 Role}</span>
+              <span class="title">{text:Lineup01 Name}</span>
+              {block:IfLineup01URL}
+                <span class="website">
+                  <a href="{text:Lineup01 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfLineup01URL}
+            </li>
+          {/block:IfLineup01Name}
+          {block:IfLineup02Name}
+            <li>
+              <span class="role">{text:Lineup02 Role}</span>
+              <span class="title">{text:Lineup02 Name}</span>
+              {block:IfLineup02URL}
+                <span class="website">
+                  <a href="{text:Lineup02 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfLineup02URL}
+            </li>
+          {/block:IfLineup02Name}
+          {block:IfLineup03Name}
+            <li>
+              <span class="role">{text:Lineup03 Role}</span>
+              <span class="title">{text:Lineup03 Name}</span>
+              {block:IfLineup03URL}
+                <span class="website">
+                  <a href="{text:Lineup03 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfLineup03URL}
+            </li>
+          {/block:IfLineup03Name}
+          {block:IfLineup04Name}
+            <li>
+              <span class="role">{text:Lineup04 Role}</span>
+              <span class="title">{text:Lineup04 Name}</span>
+              {block:IfLineup04URL}
+                <span class="website">
+                  <a href="{text:Lineup04 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfLineup04URL}
+            </li>
+          {/block:IfLineup04Name}
+          {block:IfLineup05Name}
+            <li>
+              <span class="role">{text:Lineup05 Role}</span>
+              <span class="title">{text:Lineup05 Name}</span>
+              {block:IfLineup05URL}
+                <span class="website">
+                  <a href="{text:Lineup05 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfLineup05URL}
+            </li>
+          {/block:IfLineup05Name}
+          {block:IfLineup06Name}
+            <li>
+              <span class="role">{text:Lineup06 Role}</span>
+              <span class="title">{text:Lineup06 Name}</span>
+              {block:IfLineup06URL}
+                <span class="website">
+                  <a href="{text:Lineup06 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfLineup06URL}
+            </li>
+          {/block:IfLineup06Name}
+          {block:IfLineup07Name}
+            <li>
+              <span class="role">{text:Lineup07 Role}</span>
+              <span class="title">{text:Lineup07 Name}</span>
+              {block:IfLineup07URL}
+                <span class="website">
+                  <a href="{text:Lineup07 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfLineup07URL}
+            </li>
+          {/block:IfLineup07Name}
+          {block:IfLineup08Name}
+            <li>
+              <span class="role">{text:Lineup08 Role}</span>
+              <span class="title">{text:Lineup08 Name}</span>
+              {block:IfLineup08URL}
+                <span class="website">
+                  <a href="{text:Lineup08 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfLineup08URL}
+            </li>
+          {/block:IfLineup08Name}
+          {block:IfLineup09Name}
+            <li>
+              <span class="role">{text:Lineup09 Role}</span>
+              <span class="title">{text:Lineup09 Name}</span>
+              {block:IfLineup09URL}
+                <span class="website">
+                  <a href="{text:Lineup09 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfLineup09URL}
+            </li>
+          {/block:IfLineup09Name}
+          {block:IfLineup10Name}
+            <li>
+              <span class="role">{text:Lineup10 Role}</span>
+              <span class="title">{text:Lineup10 Name}</span>
+              {block:IfLineup10URL}
+                <span class="website">
+                  <a href="{text:Lineup10 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfLineup10URL}
+            </li>
+          {/block:IfLineup10Name}
+        </ul>
+      </div>
+    </section>
+      <!--
+    <section id="spec" class="section">
+      <div class="content">
+        {block:IfIntroduction}
+          <h2>{text:Introduction Heading}</h2>
+          <p class="introduction">
+            {text:Introduction}
+          </p>
+        {/block:IfIntroduction}
+        <div class="jacket-image">
+          {block:IfJacketImage}
+            <img src="{image:Jacket}" alt="{Title}">
+          {/block:IfJacketImage}
+          {block:IfNotJacketImage}
+            <div class="jacket-noimage">
+              NOW PRINTING
+            </div>
+          {/block:IfNotJacketImage}
+        </div>
+        <table class="table" id="spec-table">
+          <tbody>
+            <tr>
+              <th>タイトル</th>
+              <td>{Title}</td>
+            </tr>
+            <tr>
+				<th>ベンダー</th>
+              <td>{block:IfCircleURL}<a href="{text:Circle URL}" target="_blank">{/block:IfCircleURL}{text:Circle Name}{block:IfCircleURL}</a>{/block:IfCircleURL}</td>
+            </tr>
+            <tr>
+              <th>仕様</th>
+              <td>{text:Spec}</td>
+            </tr>
+            <tr>
+              <th>リリース予定</th>
+              <td>{text:Release Date}</td>
+            </tr>
+            <tr>
+              <th>プラットフォーム</th>
+              <td>{text:Event Booth Number}</td>
+            </tr>
+            <tr>
+              <th>価格</th>
+              <td>{text:Price}</td>
+            </tr>
+            {block:IfStore01Name}
+              <tr>
+                <th>購入</th>
+                <td>
+                  <ul>
+                    <li>
+                      <a href="{text:Store01 URL}" target="_blank">{text:Store01 Name}</a>
+                    </li>
+                    {/block:IfStore01Name}
+                    {block:IfStore01Name}
+                  </ul>
+                </td>
+              </tr>
+            {/block:IfStore01Name}
+          </tbody>
+        </table>
+        {block:IfStore01Name}
+          <div class="available">
+            <h3>Available Now</h3>
+            <span class="available-btn btn btn-large">購入する</span>
+            {/block:IfStore01Name}
+              <div class="available-dropdown">
+                <ul>
+                  <li>
+                    <a href="{text:Store01 URL}" target="_blank">{text:Store01 Name}</a>
+                  </li>
+                </ul>
+              </div>
+          {block:IfStore01Name}
+          </div>
+        {/block:IfStore01Name}
+
+        <ul class="social-buttons">
+          {block:IfEnableTweetButton}
+          <li class="social-button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+          </li>
+          {/block:IfEnableTweetButton}
+          {block:IfEnableFacebookButton}
+          <li class="social-button">
+            <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+          </li>
+          {/block:IfEnableFacebookButton}
+          {block:IfEnableBookmarkButton}
+          <li class="social-button">
+            <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+          </li>
+          {/block:IfEnableBookmarkButton}
+          {block:IfEnablePlus1Button}
+          <li class="social-button">
+            <div class="g-plusone" data-size="medium"></div>
+          </li>
+          {/block:IfEnablePlus1Button}
+        </ul>
+
+      </div>
+    </section>
+      -->
+<!--
+    <section id="screenshot" class="section">
+      <div class="content">
+        <h3>Screen Shot</h3>
+		<ol class="list">
+		<ul style="list-style-type:none;">
+		{block:IfScreenShot1Image}
+		<li style="float:left;"><img src="{image:ScreenShot1}" alt="ScreenShot1" width="280"></li>
+		{/block:IfScreenShot1Image}
+		{block:IfScreenShot2Image}
+		<li style="float:left;"><img src="{image:ScreenShot2}" alt="ScreenShot2" width="280"></li>
+		{/block:IfScreenShot2Image}
+		{block:IfScreenShot3Image}
+		<li style="float:left;"><img src="{image:ScreenShot3}" alt="ScreenShot3" width="280"></li>
+		{/block:IfScreenShot3Image}
+		{block:IfScreenShot4Image}
+		<li style="float:left;"><img src="{image:ScreenShot4}" alt="ScreenShot4" width="280"></li>
+		{/block:IfScreenShot4Image}
+		{block:IfScreenShot5Image}
+		<li style="float:left;"><img src="{image:ScreenShot5}" alt="ScreenShot5" width="280"></li>
+		{/block:IfScreenShot5Image}
+		</ul>
+        </ol>
+      </div>
+    </section>
+
+    {block:IfYoutubeEmbedCode}
+      <section id="youtube" class="section">
+        <div class="content">
+          <h3>Youtube</h3>
+          <div id="youtube-iframe">
+            <iframe width="560" height="315" src="http://www.youtube.com/embed/{text:Youtube Embed Code}" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    {/block:IfYoutubeEmbedCode}
+-->
+   
+
+    {block:IfBanner1Image}
+      <section id="banner" class="section">
+        <div class="content">
+          <h3>Banner</h3>
+          <span class="banner-box">
+            <img src="{image:Banner1}" alt="Banner1">
+          </span>
+          <span class="banner-box">
+            <img src="{image:Banner2}" alt="Banner2">
+          </span>
+        </div>
+      </section>
+    {block:IfBanner1Image}
+
+  </div>
+
+  {/block:IndexPage}<!-- END Index -->
+
+  {block:PermalinkPage}<!-- Permalink -->
+    {block:Posts}
+      <div class="section-wrapper">
+        <section class="section">
+          <div class="content">
+            {block:Text}<!-- 固定ページ -->
+              {block:Title}
+                <div class="page-header">
+                  <h2><a href="{Permalink}" class="permalink">{Title}</a></h2>
+                </div>
+              {/block:Title}
+              <div class="entry-content">
+                {Body}
+              </div>
+            {/block:Text}
+          </div>
+        </section>
+      </div>
+    {/block:Posts}
+  {/block:PermalinkPage}<!-- Permalink -->
+
+  <footer id="footer">
+    <div class="content">
+      <p>
+        ©{CopyrightYears} {Title}<br/>
+        {text:Footer Text}
+      </p>
+      <p>
+      <!-- ↓ ここのリンク消さないでほしいっす -->
+        <a href="http://sanographix.github.io/tumblr/tokusetsu2/" target="_blank">Tokusetsu 2</a> theme designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="//sanographix.github.io/public/tumblr/tokusetsu2/js/tokusetsu2-js.min.js"></script>
+
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s) {
+      var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.src = url; js.id = id;
+        fjs.parentNode.insertBefore(js, fjs);
+      };
+      load('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'fbjssdk');
+      load('https://apis.google.com/js/plusone.js', 'gplus1js');
+      load('//b.st-hatena.com/js/bookmark_button.js');
+      load('//platform.twitter.com/widgets.js', 'tweetjs');
+    }(document, 'script'));
+  </script>
+
+</body>
+</html>
